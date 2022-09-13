@@ -1,0 +1,3 @@
+git log --oneline --all -graph
+// extensions 로 해결 가능 (git graph)
+
