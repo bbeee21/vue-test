@@ -14,16 +14,19 @@
     <!-- 전체 형태로 반복하기 위해서는 div 태그 위에다가 하기 -->
     <h4 class="red" :style = "OneRoomStyle"> {{ products[0] }} </h4>
     <p>{{ price[0] }}만원</p>
-    <button @click="increase()">허위매물신고</button><div> 신고수 : {{ 신고수 }}</div><br>
+    <button @click="신고수[0]++">허위매물신고</button><div> 신고수 : {{ 신고수[0] }}</div>
   </div>
+
   <div>
     <h4> {{ products[1] }}</h4>
     <p>{{ price[1] }} 만원</p>
-    <button @click="sale()">원룸비 할인 받는 버튼</button> <span>할인된 횟수 : {{ count }}</span>
+    <button @click="신고수[1]++">허위매물신고</button><div> 신고수 : {{ 신고수[1] }}</div>
   </div>
+
   <div>
     <h4> {{ products[2] }} </h4>
     <p>{{ price[2] }} 만원</p>
+    <button @click="신고수[2]++">허위매물신고</button><div> 신고수 : {{ 신고수[2] }}</div>
   </div>
 </template>
 
@@ -39,8 +42,7 @@ export default {
   name: 'App',
   data(){
     return {
-      count :0,
-      신고수 : 0,
+      신고수 : [0,0,0],
       menus : ['Home', 'Shop', 'About'],
       products : ['과천동원룸','역삼동원룸','논현동원룸'],
       price : [40,50,20],
