@@ -13,16 +13,17 @@
     <!-- h4 태그에도 독같이 v-for 적용 가능함 -->
     <!-- 전체 형태로 반복하기 위해서는 div 태그 위에다가 하기 -->
     <h4 class="red" :style = "OneRoomStyle"> {{ products[0] }} </h4>
-    <p>{{ price[0] }}</p>
+    <p>{{ price[0] }}만원</p>
     <button @click="increase()">허위매물신고</button><div> 신고수 : {{ 신고수 }}</div><br>
   </div>
   <div>
-    <h4> {{ products[1] }} </h4>
-    <p>{{ price[1] }}</p>
+    <h4> {{ products[1] }}</h4>
+    <p>{{ price[1] }} 만원</p>
+    <button @click="sale()">원룸비 할인 받는 버튼</button> <span>할인된 횟수 : {{ count }}</span>
   </div>
   <div>
     <h4> {{ products[2] }} </h4>
-    <p>{{ price[2] }}</p>
+    <p>{{ price[2] }} 만원</p>
   </div>
 </template>
 
@@ -38,6 +39,7 @@ export default {
   name: 'App',
   data(){
     return {
+      count :0,
       신고수 : 0,
       menus : ['Home', 'Shop', 'About'],
       products : ['과천동원룸','역삼동원룸','논현동원룸'],
@@ -51,6 +53,10 @@ export default {
   methods : {
     increase(){
       this.신고수 += 1;
+    },
+    sale(){
+      this.price[1] -= 2;
+      this.count += 1;
     }
   }
 
