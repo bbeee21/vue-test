@@ -9,22 +9,21 @@
     <a v-for="i in menus" :key="i">{{ i}}</a>
   </div>
 
-  <div v-for="i in products" :key="i" >{{ i }}
+  <div>
     <!-- h4 태그에도 독같이 v-for 적용 가능함 -->
     <!-- 전체 형태로 반복하기 위해서는 div 태그 위에다가 하기 -->
-    <!-- <h4 class="red" :style = "OneRoomStyle"> {{ products[0] }} </h4> -->
+    <h4 class="red" :style = "OneRoomStyle"> {{ products[0] }} </h4>
     <p>{{ price[0] }}</p>
-    <button @click="">허위매물신고</button><div> 신고수 : {{ 신고수++ }}</div><br>
-
+    <button @click="신고수 += 1">허위매물신고</button><div> 신고수 : {{ 신고수 }}</div><br>
   </div>
-  <!-- <div>
+  <div>
     <h4> {{ products[1] }} </h4>
     <p>{{ price[1] }}</p>
   </div>
   <div>
     <h4> {{ products[2] }} </h4>
     <p>{{ price[2] }}</p>
-  </div> -->
+  </div>
 </template>
 
 <script>
