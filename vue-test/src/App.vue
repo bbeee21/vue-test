@@ -14,6 +14,7 @@
     <!-- 전체 형태로 반복하기 위해서는 div 태그 위에다가 하기 -->
     <!-- <h4 class="red" :style = "OneRoomStyle"> {{ products[0] }} </h4> -->
     <p>{{ price[0] }}</p>
+    <button>허위매물신고</button><div> 신고수 : 0</div><br>
   </div>
   <!-- <div>
     <h4> {{ products[1] }} </h4>
