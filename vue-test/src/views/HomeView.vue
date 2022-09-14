@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="GS EPS Logo" src="../assets/logo_gseps.jpg" class="gs_logo">
+    <HelloWorld msg="Welcome to Your GS EPS App"/>
   </div>
 </template>
 
@@ -16,3 +16,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+.gs_logo{
+  width : 20%;
+}
+</style>
