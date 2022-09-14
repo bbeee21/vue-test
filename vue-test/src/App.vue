@@ -1,55 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="GS EPS LOGO" src="./assets/logo_gseps.jpg" class="gs_logo">
+  <Headers ></Headers>
+    <div>
+      <!-- h4 태그에도 독같이 v-for 적용 가능함 -->
+      <!-- 전체 형태로 반복하기 위해서는 div 태그 위에다가 하기 -->
+      <img src="https://ic.zigbang.com/ic/items/33259061/1.jpg?w=0&h=640&a=1" class="room-image">
+      <h4 class="red" :style = "OneRoomStyle"> {{ products[0] }} </h4>
+      <p>{{ price[0] }}만원</p>
+      <button @click="신고수[0]++">허위매물신고</button><div> 신고수 : {{ 신고수[0] }}</div>
+    </div>
 
-  <div class="menu">
-    <!-- <a>Home</a>
-    <a>Products</a>
-    <a>About</a> -->
+    <div>
+      <h4> {{ products[1] }}</h4>
+      <p>{{ price[1] }} 만원</p>
+      <button @click="신고수[1]++">허위매물신고</button><div> 신고수 : {{ 신고수[1] }}</div>
+    </div>
 
-    <a v-for="i in menus" :key="i">{{ i}}</a>
-  </div>
+    <div>
+      <h4> {{ products[2] }} </h4>
+      <p>{{ price[2] }} 만원</p>
+      <button @click="신고수[2]++">허위매물신고</button><div> 신고수 : {{ 신고수[2] }}</div>
+    </div>
 
-  <div>
-    <!-- h4 태그에도 독같이 v-for 적용 가능함 -->
-    <!-- 전체 형태로 반복하기 위해서는 div 태그 위에다가 하기 -->
-    <h4 class="red" :style = "OneRoomStyle"> {{ products[0] }} </h4>
-    <p>{{ price[0] }}만원</p>
-    <button @click="신고수[0]++">허위매물신고</button><div> 신고수 : {{ 신고수[0] }}</div>
-  </div>
-
-  <div>
-    <h4> {{ products[1] }}</h4>
-    <p>{{ price[1] }} 만원</p>
-    <button @click="신고수[1]++">허위매물신고</button><div> 신고수 : {{ 신고수[1] }}</div>
-  </div>
-
-  <div>
-    <h4> {{ products[2] }} </h4>
-    <p>{{ price[2] }} 만원</p>
-    <button @click="신고수[2]++">허위매물신고</button><div> 신고수 : {{ 신고수[2] }}</div>
-  </div>
 </template>
 
 <script>
-
-// function aaa(){
-//   console.log('dasdsa');
-//   console.log('dasdas121');
-//   console.log('dsadsa121`1');
-// }
+import Headers from './components/layout/Header.vue';
 
 export default {
   name: 'App',
   data(){
     return {
       신고수 : [0,0,0],
-      menus : ['Home', 'Shop', 'About'],
       products : ['과천동원룸','역삼동원룸','논현동원룸'],
       price : [40,50,20],
       OneRoomStyle : 'color : blue',
     }
   },
   components: {
+    Headers
     
   },
   methods : {
@@ -75,16 +64,14 @@ export default {
   margin-top: 60px;
 }
 
-.menu {
-  background : rgb(14, 169, 118);
-  padding : 15px;
-  border-radius: 5px;
+
+
+.room-image {
+  width : 10%;
+  margin-top : 40px;
 }
 
-.menu a {
-  color : whitesmoke;
-  padding : 15px;
+.gs_logo {
+  width : 20%;
 }
-
-
 </style>
