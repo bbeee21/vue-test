@@ -30,5 +30,24 @@ vue add router
 npm install vue-router --save
 
 ## version info
-"vue": "^3.2.13",
+"vue": "^3.2.13", >> 3.2.39
 "vue-router": "^4.1.5"
+
+## bootstrap
+npm install vue bootstrap-vue bootstrap
+
+## nuxtjs/veutify // 필요한가? => nuxt 프로젝트를 진행해야해서
+npm install @nuxtjs/vuetify -D
+--> vue cli 사용해서 >> vue add vuetify
+
+## npm 설치 리스트 확인
+npm list -g --depth=0
+
+### 출력
+C:\Users\Administrator\AppData\Roaming\npm
+└── @vue/cli@5.0.8
+
+
+## vue-cli 삭제
+npm uninstall -g vue-cli
+
