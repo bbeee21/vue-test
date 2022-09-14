@@ -1,25 +1,18 @@
 <template>
-  <div class="home">
-    <img alt="GS EPS Logo" src="../assets/logo_gseps.jpg" class="gs_logo">
-    <HelloWorld msg="Welcome to Your GS EPS App"/>
-  </div>
+  <HelloWorld />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { defineComponent } from 'vue';
 
-export default {
+// Components
+import HelloWorld from '../components/HelloWorld.vue';
+
+export default defineComponent({
   name: 'HomeView',
+
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+});
 </script>
-
-<style scoped>
-
-.gs_logo{
-  width : 20%;
-}
-</style>
