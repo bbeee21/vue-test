@@ -5,3 +5,6 @@
   "trailingComma": "none",
   "printWidth": 80
 }
+
+// formatter : prettier - code formatter 에서 참고
+// eslint + standard config 인 경우에만 해당 파일 필요(사실 불필요한 부분)
